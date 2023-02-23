@@ -1,0 +1,22 @@
+<div id="<%= dom_id activity %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Note:</strong>
+    <%= activity.note %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Amount:</strong>
+    <%= activity.amount %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Challenge:</strong>
+    <%= activity.challenge.name %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this activity", challenge_activity_path(@challenge), class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this activity', edit_challenge_activity_path(@challenge), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>

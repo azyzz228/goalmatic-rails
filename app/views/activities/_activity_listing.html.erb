@@ -1,0 +1,10 @@
+
+    <div class="flex flex-row items-center justify-start border-b border-slate-100 py-4 hover:bg-slate-50 px-4 rounded-md even:bg-white" id=<%= dom_id(activity) %>>
+        <p class="w-1/3"><%= activity.amount %></p>
+        <%= link_to "#{activity.note}", challenge_activity_path(@challenge, activity), class:"decoration-sky-500 hover:underline w-1/3" %>
+        <p class="w-1/3 text-right">
+            <%= button_to "delete", challenge_activity_path(@challenge, activity),
+            method: :delete, 
+            class: "inline text-sm px-2 py-1 rounded-md text-red-500 bg-red-100 cursor-pointer hover:bg-red-200"%>
+        </p>
+    </div>

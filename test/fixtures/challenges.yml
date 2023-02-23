@@ -1,0 +1,26 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+sleep_40:
+  name: Sleep 40 hours a week
+  category: sleep
+  goal: 40
+  progress: 0
+  ends_at: 2023-12-31
+  units: hours
+
+study_18:
+  name: Study 18 hours a week
+  category: study
+  goal: 18
+  progress: 0
+  ends_at: 2023-12-31
+  units: hours
+
+
+challenge_without_activities:
+  name: Cram CS290
+  category: study
+  goal: 6
+  progress: 0
+  ends_at: 2023-12-31
+  units: hours

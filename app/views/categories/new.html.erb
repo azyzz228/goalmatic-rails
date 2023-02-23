@@ -1,0 +1,10 @@
+
+<div class="mx-auto md:w-2/3 w-full">
+<div class="flex flex-row justify-between items-center my-12">
+    <p class="text-3xl text-slate-900 font-bold">Add New Category</p>
+    <%= link_to "Go back", categories_path, class:"bg-slate-200 text-slate-500 px-5 py-3 rounded-md" %>
+</div>
+
+  <%= render "form", category: @category %>
+
+</div>

@@ -1,0 +1,17 @@
+
+<div class="container">
+    <div class="flex flex-row justify-between items-center my-12">
+        <p class="text-3xl text-slate-900 font-bold">Editing category</p>
+        <div class="">
+            <%= link_to 'Back to categories', categories_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+            <%= link_to 'Show category', category_path(@category), class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+        </div>
+    </div>
+
+    <!-- Category name -->
+    <div class="">
+        <%= render "form", category: @category %>
+    </div>
+
+
+</div>

@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+slept_8:
+  note: Went to bed on time
+  amount: 8
+  challenge: sleep_40
+
+studied_3:
+  note: Got it done right after lunch
+  amount: 3
+  challenge: study_18

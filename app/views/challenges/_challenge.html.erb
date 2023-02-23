@@ -1,0 +1,39 @@
+<div class="">
+
+  <div class=" inline-block px-4 py-2 rounded-full bg-slate-50 text-slate-700 text-sm">
+    <%= Category.find(challenge.category_id).name %>
+    <i class="fa-solid fa-tag text-slate-500 ml-3"></i>
+  </div>  
+
+  <p class="my-5 text-4xl text-sky-500 font-bold">
+    <%= challenge.name %>
+  </p>
+
+
+<div class="flex flex-row justify-start items-center space-x-24 mt-8">
+    <div class="flex flex-row items-center justify-start space-x-1 ">
+      <i class="fa-solid fa-bullseye text-slate-400"></i>
+      <p class="text-slate-800 text-lg">Goal:</p>
+      <p class="text-lg text-slate-900 font-semibold"><%= challenge.goal %> <%= challenge.units %></p>
+    </div>
+
+  <div class="flex flex-row items-center justify-start space-x-1">
+    <i class="fa-solid fa-bars-progress text-slate-400"></i>
+    <p class="text-slate-800 text-lg">Progress:</p>
+    <p class="text-lg text-sky-800 font-semibold"><%= challenge.progress %></p>
+  </div>
+</div>
+
+  <div class="flex flex-row items-center justify-start space-x-1 mt-6 mb-12">
+    <i class="fa-solid fa-hourglass-half text-slate-400"></i>
+    <p class="text-slate-800 text-lg">Ends at:</p>
+    <p class="text-lg text-slate-900 font-semibold"><%= challenge.ends_at %></p>
+  </div>
+
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this challenge", challenge, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this challenge', edit_challenge_path(challenge), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>

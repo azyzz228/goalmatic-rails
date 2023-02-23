@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GoalmaticAs1036</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body class="text-slate-900">
+    <header class="py-6 px-8 border-b-2 border-slate-200 rounded-b-md">
+      <div class="container mx-auto flex flex-row justify-center items-center space-x-12 text-slate-700 decoration-sky-500">
+        <%= link_to "Challenges", challenges_path, class: "hover:underline"%>
+        <%= link_to "Categories", categories_path, class: "hover:underline" %>
+      </div>
+    </header>
+
+    <main class="container mx-auto mt-28 px-5 flex">
+      <%= yield %>
+    </main>
+  </body>
+</html>

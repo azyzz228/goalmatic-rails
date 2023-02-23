@@ -1,0 +1,10 @@
+<div class="flex flex-row justify-between items-center px-12 py-8 even:bg-slate-50 rounded-md">
+    <p class="text-lg text-slate-800 my-8"><%= category.name %></p>
+
+  <% if action_name != "show" %>
+  <div class="">
+    <%= link_to "Show", category, class:"bg-slate-200 hover:bg-slate-300 text-slate-500 px-5 py-3 rounded-md" %>
+    <%= link_to "Edit", edit_category_path(category), class:"bg-slate-200 hover:bg-slate-300 text-slate-500 px-5 py-3 rounded-md" %>
+    </div>
+  <% end %>
+</div>
